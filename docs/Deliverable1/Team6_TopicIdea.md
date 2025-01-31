@@ -1,4 +1,4 @@
-Artificial Hype: The Role of Bots in Gaming Ecosystem Manipulation
+# Artificial Hype: The Role of Bots in Gaming Ecosystem Manipulation
 
 - Harjot THANDI
 - Saimanoj YARASI
