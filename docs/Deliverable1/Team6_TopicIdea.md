@@ -1,7 +1,9 @@
 Artificial Hype: The Role of Bots in Gaming Ecosystem Manipulation
-Harjot THANDI
-Saimanoj YARASI
-Omar Shamsul HAQUE
+
+- Harjot THANDI
+- Saimanoj YARASI
+- Omar Shamsul HAQUE
+
 https://github.com/Harjot1711/EECS-4461-Group6
 
 The gaming industry has developed into an elaborate digital environment where player perception is influenced by both natural interactions and AI-powered bots that affect online discussion, engagement metrics, and 
