@@ -19,13 +19,13 @@ systems and anti-bot countermeasures are always evolving, while AI-powered bots 
 
 # - Section 2 Phenomena of interest: Related Works
 
-Karataş & Şahin (2017) review different ways to detect social bots on online platforms. They explain three main methods: machine learning, network analysis, and content analysis. The paper highlights that bots are becoming more advanced and harder to detect. The authors suggest that combining multiple detection techniques, such as analyzing user behaviour and content patterns, is the best approach. They also discuss new research trends, like deep learning, to improve detection methods.
+1. Karataş & Şahin (2017) review different ways to detect social bots on online platforms. They explain three main methods: machine learning, network analysis, and content analysis. The paper highlights that bots are becoming more advanced and harder to detect. The authors suggest that combining multiple detection techniques, such as analyzing user behaviour and content patterns, is the best approach. They also discuss new research trends, like deep learning, to improve detection methods.
 
-1. Karataş, A., & Şahin, S. (2017). A review on social bot detection techniques and research directions. ResearchGate. Retrieved from [https://www.researchgate.net/publication/322853694_A_Review_on_Social_Bot_Detection_Techniques_and_Research_Directions](https://www.researchgate.net/publication/322853694_A_Review_on_Social_Bot_Detection_Techniques_and_Research_Directions)
+Karataş, A., & Şahin, S. (2017). A review on social bot detection techniques and research directions. ResearchGate. Retrieved from [https://www.researchgate.net/publication/322853694_A_Review_on_Social_Bot_Detection_Techniques_and_Research_Directions](https://www.researchgate.net/publication/322853694_A_Review_on_Social_Bot_Detection_Techniques_and_Research_Directions)
 
-Wang et al. (2019) study how to detect fake reviews in app stores. Fake reviews can trick users and affect app rankings. The authors analyze how fake reviews are written, when they are posted, and who writes them. They use machine learning to create models that identify fake reviews. Their research shows that looking at user behaviour and writing style helps detect fake reviews. They suggest that using deep learning and sentiment analysis can improve accuracy.
+2. Wang et al. (2019) study how to detect fake reviews in app stores. Fake reviews can trick users and affect app rankings. The authors analyze how fake reviews are written, when they are posted, and who writes them. They use machine learning to create models that identify fake reviews. Their research shows that looking at user behaviour and writing style helps detect fake reviews. They suggest that using deep learning and sentiment analysis can improve accuracy.
 
-2. Wang, Y., Zhang, J., Chau, M., & Chang, K. (2019). Towards understanding and detecting fake reviews in app stores. Empirical Software Engineering, 24(3), 1674–1705. [https://link.springer.com/article/10.1007/s10664-019-09706-9](https://link.springer.com/article/10.1007/s10664-019-09706-9)
+Wang, Y., Zhang, J., Chau, M., & Chang, K. (2019). Towards understanding and detecting fake reviews in app stores. Empirical Software Engineering, 24(3), 1674–1705. [https://link.springer.com/article/10.1007/s10664-019-09706-9](https://link.springer.com/article/10.1007/s10664-019-09706-9)
 
 
 # - Section 3: Describe the Core Components of the Simulation
