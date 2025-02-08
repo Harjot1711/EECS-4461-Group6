@@ -45,3 +45,6 @@ $\color{blue}{\text{Blue Nodes}}$: Human users interacting naturally but suscept
 Edges (Connections): Pathways where misinformation spreads through reviews, upvotes, and recommendations.
 
 
+The diagram represents how bots (red nodes) drive human users (blue nodes) in a gaming platform by propagating manipulated engagement. Similar to how a virus spreads in a network, bots develop artificial trends, inflate game ratings, and manipulate public perception. Over time, misinformation flows through the network, affecting more users and shaping biased narratives.
+
+
