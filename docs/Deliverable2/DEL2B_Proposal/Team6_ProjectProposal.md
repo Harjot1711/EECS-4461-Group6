@@ -38,11 +38,11 @@ Wang et al. (2019) study how to detect fake reviews in app stores. Fake reviews 
 
 ![IMG_1766](https://github.com/user-attachments/assets/745ab836-c4a7-4ef9-92ab-ae2af1cb6d81)
 
-$\color{red}{\text{Red Nodes}}$: Bots generating fake engagement and disinformation.
+__Red Nodes__: Bots generating fake engagement and disinformation.
 
-$\color{blue}{\text{Blue Nodes}}$: Human users interacting naturally but susceptible to bot influence.
+__Blue Nodes__: Human users interacting naturally but susceptible to bot influence.
 
-Edges (Connections): Pathways where misinformation spreads through reviews, upvotes, and recommendations.
+__Edges (Connections)__: Pathways where misinformation spreads through reviews, upvotes, and recommendations.
 
 
 The diagram represents how bots (red nodes) influence human users (blue nodes) in a gaming platform by propagating manipulated engagement. Similar to how a virus spreads in a network, bots develop artificial trends, inflate game ratings, and manipulate public perception. Over time, misinformation flows through the network, affecting more users and shaping biased narratives.
