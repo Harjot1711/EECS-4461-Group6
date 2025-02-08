@@ -36,4 +36,5 @@ Wang et al. (2019) study how to detect fake reviews in app stores. Fake reviews 
 
 # - Section 4: Simulation Anticipated Outcomes
 
-![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
+![IMG_1766](https://github.com/user-attachments/assets/745ab836-c4a7-4ef9-92ab-ae2af1cb6d81)
+
