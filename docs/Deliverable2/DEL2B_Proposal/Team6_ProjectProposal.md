@@ -29,3 +29,7 @@ Wang et al. (2019) study how to detect fake reviews in app stores. Fake reviews 
 
 
 # - Section 3: Describe the Core Components of the Simulation
+
+- 3.1 Entities:
+- 3.2
+- *3.3 Algorithms:* Content visibility is largely determined by platform algorithms, which bots aggressively take advantage of to sway interaction. By manipulating watch duration, engagement rates, and click-through data, recommendation engines on YouTube, Twitch, and Steam are deceitfully boosted for specific titles. Similar mass engagement strategies are used to manipulate Reddit and Discord's content prioritization systems, which artificially enhance or hinder particular narratives. Adaptive bots always evolve to evade detection, which presents a persistent difficulty even though some platforms employ sentiment analysis and moderation techniques to identify bot-like activity. This dynamic is best captured by the Virus on a Network Model, in which bot-driven disinformation propagates via engagement loops, using platform algorithms to expand their audience and skew public opinion. 
