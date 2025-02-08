@@ -26,3 +26,6 @@ Karataş & Şahin (2017) review different ways to detect social bots on online p
 Wang et al. (2019) study how to detect fake reviews in app stores. Fake reviews can trick users and affect app rankings. The authors analyze how fake reviews are written, when they are posted, and who writes them. They use machine learning to create models that identify fake reviews. Their research shows that looking at user behavior and writing style helps detect fake reviews. They suggest that using deep learning and sentiment analysis can improve accuracy.
 
 2. Wang, Y., Zhang, J., Chau, M., & Chang, K. (2019). Towards understanding and detecting fake reviews in app stores. Empirical Software Engineering, 24(3), 1674–1705. [https://link.springer.com/article/10.1007/s10664-019-09706-9](https://link.springer.com/article/10.1007/s10664-019-09706-9)
+
+
+# - Section 3: Describe the Core Components of the Simulation
