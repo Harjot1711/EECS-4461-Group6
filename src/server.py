@@ -9,12 +9,14 @@ def plot_network(model):
 
     human_nodes = [agent.unique_id for agent in model.schedule.agents if isinstance(agent, HumanAgent)]
     bot_nodes = [agent.unique_id for agent in model.schedule.agents if isinstance(agent, BotAgent)]
+    
+    bot_colors = ['red' if agent.bias == -1 else 'green' for agent in model.schedule.agents if isinstance(agent, BotAgent)]
 
     nx.draw_networkx_nodes(G, pos, nodelist=human_nodes, node_color='blue', node_size=300, alpha=0.8)
-    nx.draw_networkx_nodes(G, pos, nodelist=bot_nodes, node_color='red', node_size=300, alpha=0.8)
+    nx.draw_networkx_nodes(G, pos, nodelist=bot_nodes, node_color=bot_colors, node_size=300, alpha=0.8)
     nx.draw_networkx_edges(G, pos, alpha=0.5)
 
-    plt.title("Network Spread: Bots (Red) Influencing Users (Blue)")
+    plt.title("Network Influence: Bots (Red = Negative, Green = Positive)")
     plt.show()
 
 if __name__ == "__main__":
