@@ -12,7 +12,7 @@ def plot_network(model):
 
     nx.draw_networkx_nodes(G, pos, nodelist=human_nodes, node_color='blue', node_size=300, alpha=0.8)
     nx.draw_networkx_nodes(G, pos, nodelist=bot_nodes, node_color='red', node_size=300, alpha=0.8)
-    nx.draw_networkxedges(G, pos, alpha=0.5)
+    nx.draw_networkx_edges(G, pos, alpha=0.5)
 
     plt.title("Network Spread: Bots (Red) Influencing Users (Blue)")
     plt.show()
