@@ -2,7 +2,7 @@ from enum import Enum
 
 from mesa.discrete_space import FixedAgent
 
-
+//DEL3
 class State(Enum):
     SUSCEPTIBLE = 0
     INFECTED = 1
