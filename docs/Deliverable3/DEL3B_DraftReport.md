@@ -28,6 +28,8 @@ These concerns align with the broader challenges in media ecosystems where bots 
 
 To illustrate, we have developed a preliminary simulation with a network-based environment where nodes represent agents and edges represent communication or rating pathways. Figure 1 (below) shows a snapshot of our prototype:
 
+![imagdfdfe](https://github.com/user-attachments/assets/8ec4e5be-7c04-4541-a627-5ed67cce7fa9)
+
 
 Red nodes: Manipulative Bots; Green nodes: genuine users; Gray nodes: users who have become skeptical or immune to manipulation.
 The simulation is designed to mimic how bots post artificial reviews or upvote certain games, prompting both other bots and human agents to echo these signals. This aligns with real-world phenomena where early hype can draw disproportionate attention.
