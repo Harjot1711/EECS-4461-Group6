@@ -1,1 +1,22 @@
 EECS4461 Group Project
+
+## A. Overview
+This project simulates the spread of artificial hype in online gaming communities by modeling interactions between social bots and real users. Our prototype uses a network-based approach where agents change state over time (e.g., Disruptors, Followers, Critical Thinkers). The simulation collects data and visualizes it through a dynamic network graph, a line chart, and a bar chart.
+
+## B. How to Run
+1. **Clone the Repository**  
+2. **Install Dependencies:**  
+   ```bash
+   pip install -r requirements.txt
+
+solara run server.py
+(If needed, use python -m solara run server.py)
+
+The terminal will display a URL (typically http://127.0.0.1:8765). Open it in your browser, adjust the sliders, and watch the simulation in real time.
+
+
+Limitations & Planned Improvements
+Bot Behavior: Currently, bots only spread hype. Future improvements will add adaptive, coordinated behaviors.
+Immunity: Agents that recover remain permanently immune. We plan to explore temporary immunity to better reflect real user behavior.
+Parameter Exploration: We are testing a limited range of parameters. Future work will include more systematic experiments and deeper statistical analysis.
+Network Structure: We currently use an Erdős–Rényi network; we may explore other network types (e.g., scale-free or small-world) to better mimic real-world social structures.
