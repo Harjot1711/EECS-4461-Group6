@@ -90,6 +90,8 @@ We implemented the simulation using Mesa (version 3.1.3) ABM library in Python. 
  3.1 Early Simulation Runs
 
 We conducted 5 runs with varying parameters to see how the system behaves. Figure 2 shows a sample run with:
+
+![imag333333e](https://github.com/user-attachments/assets/7e89c230-cbd9-4c4e-b83c-fa2cdba7965a)
  
 - N = 50  
 - Avg Node Degree = 4  
