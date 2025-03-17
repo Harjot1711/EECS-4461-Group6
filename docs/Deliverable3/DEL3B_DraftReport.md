@@ -1,12 +1,16 @@
 
-  Team 6 Draft Report
+#Team 6 Draft Report
 
-§A. Interim Report Overview
+- Harjot THANDI
+- Saimanoj YARASI
+- Omar Shamsul HAQUE
+  
+# §A. Interim Report Overview
 
 This Interim Report represents our team’s progress toward understanding and simulating the phenomenon of Artificial Hype in Gaming Communities in AI-to-AI interactions. We have advanced the conceptual model introduced in Deliverable 2, refined the agent-based simulation design, and run preliminary tests to gather early observations and identify challenges. This report establishes a strong foundation for the Final Report (Deliverable 4.B) by detailing our phenomenon overview, simulation design, and initial results. 
 In the upcoming final phase, we will integrate additional scholarly sources, refine the simulation parameters, enhance our data collection, and expand our analysis. The current work demonstrates approximately two-thirds completion of our project, providing a roadmap for finalizing and enriching our results in Deliverable 4.B.
 
-§1. Phenomenon Overview
+# §1. Phenomenon Overview
 
 1.1 Introduction to the Phenomenon:
 Our chosen phenomenon is “The Emergence and Spread of Artificial Hype in Gaming Ecosystems”, where AI-driven social bots interact with real users to inflate the popularity of certain games. According to Smith et al., 2023, manipulative bot behavior can create disproportionate trends and skew user perception, ultimately affecting which games receive the most attention. By focusing on AI-to-AI interactions, we highlight cases where automated agents - ranging from simplistic Rating Spammers to sophisticated Conversational Bots - amplify or distort gaming metrics in ways that even other AI systems (e.g. recommendation algorithms) respond to, creating feedback loops. 
@@ -33,7 +37,7 @@ The simulation is designed to mimic how bots post artificial reviews or upvote c
 From initial runs, we observe that high bot concentration can create a self-sustaining “fake popularity” loop, echoing [Johnson & Lee’s (2022)] observation that artificially inflated metrics can mislead algorithms and users alike. While our current illustration is basic, it demonstrates how even a small but active cluster of bots can mislead both real users and other bots, feeding into recommendation systems.
 
 
-§2. Simulation Design & Implementation
+# §2. Simulation Design & Implementation
 
 2.1 System Overview
 
@@ -81,7 +85,7 @@ We implemented the simulation using Mesa (version 3.1.3) ABM library in Python. 
 
 
 
- §3. Preliminary Observations & Results
+ # §3. Preliminary Observations & Results
 
  3.1 Early Simulation Runs
 
@@ -116,7 +120,7 @@ After about 20 steps, we observed a noticeable surge in “misled” humans, lea
 - Figure 4: Network Snapshots - Step 10 vs. Step 30 side-by-side, illustrating the transition from a scattered set of bots to a heavily infected network, followed by a wave of immunization.
 
 
- §4. Challenges & Next Steps
+ # §4. Challenges & Next Steps
 
  4.1 Development Challenges
 
@@ -140,7 +144,7 @@ After about 20 steps, we observed a noticeable surge in “misled” humans, lea
 4. Incorporate More Literature: We will integrate new references to connect our findings with existing ABM work on misinformation spread (e.g., Brown & Nguyen, 2020).  
 
 
-§6. References
+# §6. References
 
 Below are the works cited in this draft, formatted in APA style. We have a minimum of 3 references; the final report will expand this list.
 
@@ -148,7 +152,8 @@ Below are the works cited in this draft, formatted in APA style. We have a minim
 - Johnson, R., & Lee, M. (2022). Gaming the system: Social bots and user trust in online game reviews. Journal of Online Gaming Research, 14(1), 45–67.  
 - Jones, P. (2021). Algorithmic amplification and social bias: A review. AI & Society, 36(4), 981–995.  
 - Smith, J., Lee, A., & Gonzalez, P. (2023). Quantifying hype manipulation in digital ecosystems. IEEE Transactions on Computational Social Systems, 9(3), 420–431.
- §7. Attestation
+ 
+# §7. Attestation
 
 We attest that all group members contributed to the Draft Report. Below is a breakdown of each member’s contributions, following the CRediT taxonomy:
 
@@ -170,12 +175,12 @@ We confirm that each member’s contributions reflect the group’s collaborativ
 
 
 
- §C. Deliverables & Submission Format
+# §C. Deliverables & Submission Format
 
 The primary file submitted here is Team6_DraftReport.pdf, located in the DEL3B_DraftReport subdirectory of our repo. It contains the full text of our interim report, including references and figures.
 
 
- §D. Expectations
+# §D. Expectations
 
 - Clarity & Organization: Our report follows the required structure and includes each section in a logical order.  
 - Phenomenon Overview: We have thoroughly introduced the phenomenon of artificial hype and connected it to relevant literature.  
