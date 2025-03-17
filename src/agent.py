@@ -1,37 +1,65 @@
-from mesa import Agent
-import random
+from enum import Enum
 
-class HumanAgent(Agent):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
-        self.engagement_level = random.uniform(0.5, 1.0)
-        self.sentiment_score = random.uniform(-1, 1)  # Negative to positive sentiment
+from mesa.discrete_space import FixedAgent
+
+
+class State(Enum):
+    SUSCEPTIBLE = 0
+    INFECTED = 1
+    RESISTANT = 2
+
+
+class VirusAgent(FixedAgent):
+    """Individual Agent definition and its properties/interaction methods."""
+
+    def __init__(
+        self,
+        model,
+        initial_state,
+        virus_spread_chance,
+        virus_check_frequency,
+        recovery_chance,
+        gain_resistance_chance,
+        cell,
+    ):
+        super().__init__(model)
+
+        self.state = initial_state
+
+        self.virus_spread_chance = virus_spread_chance
+        self.virus_check_frequency = virus_check_frequency
+        self.recovery_chance = recovery_chance
+        self.gain_resistance_chance = gain_resistance_chance
+        self.cell = cell
+
+    def try_to_infect_neighbors(self):
+        for agent in self.cell.neighborhood.agents:
+            if (agent.state is State.SUSCEPTIBLE) and (
+                self.random.random() < self.virus_spread_chance
+            ):
+                agent.state = State.INFECTED
+
+    def try_gain_resistance(self):
+        if self.random.random() < self.gain_resistance_chance:
+            self.state = State.RESISTANT
+
+    def try_remove_infection(self):
+        # Try to remove
+        if self.random.random() < self.recovery_chance:
+            # Success
+            self.state = State.SUSCEPTIBLE
+            self.try_gain_resistance()
+        else:
+            # Failed
+            self.state = State.INFECTED
+
+    def check_situation(self):
+        if (self.state is State.INFECTED) and (
+            self.random.random() < self.virus_check_frequency
+        ):
+            self.try_remove_infection()
 
     def step(self):
-        neighbors = self.model.grid.get_neighbors(self.pos, include_center=False)
-        for neighbor in neighbors:
-            if isinstance(neighbor, BotAgent):
-                influence_factor = random.uniform(0.1, 0.5) * neighbor.influence_power
-                self.engagement_level *= (1 + influence_factor)
-                
-                # Sentiment manipulation: Bots shift sentiment towards their agenda
-                sentiment_shift = random.choice([-0.2, 0.2]) * neighbor.influence_power
-                self.sentiment_score = max(-1, min(1, self.sentiment_score + sentiment_shift))
-
-class BotAgent(Agent):
-    def __init__(self, unique_id, model, bias):
-        super().__init__(unique_id, model)
-        self.influence_power = random.uniform(1.2, 1.5)
-        self.bias = bias  # Bots can be pro-game (+1) or anti-game (-1)
-        self.engagement_level = self.influence_power  # Define engagement level
-        self.sentiment_score = bias  # Bots have a fixed sentiment (either +1 or -1)
-
-    def step(self):
-        neighbors = self.model.grid.get_neighbors(self.pos, include_center=False)
-        for neighbor in neighbors:
-            if isinstance(neighbor, HumanAgent):
-                neighbor.engagement_level *= self.influence_power
-                
-                # Shift sentiment towards bot's intended bias
-                sentiment_shift = 0.3 * self.bias
-                neighbor.sentiment_score = max(-1, min(1, neighbor.sentiment_score + sentiment_shift))
+        if self.state is State.INFECTED:
+            self.try_to_infect_neighbors()
+        self.check_situation()
