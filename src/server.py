@@ -1,12 +1,12 @@
 import math
 import logging
 import solara
-//DEL3
 import os
+import matplotlib.pyplot as plt
+
 print("Using model file:", os.path.abspath(__file__))
 
 from model import State, VirusOnNetwork, number_infected
-
 from mesa.visualization import (
     Slider,
     SolaraViz,
@@ -32,6 +32,21 @@ def get_resistant_susceptible_ratio(model):
     return solara.Markdown(
         f"Resistant/Susceptible Ratio: {ratio_text}<br>Infected Remaining: {infected_text}"
     )
+
+# ---------------------------
+# Export Data Button Component
+# ---------------------------
+@solara.component
+def ExportButton(model):
+    def on_click():
+        df = model.datacollector.get_model_vars_dataframe()
+        df.to_csv("model_data_export.csv", index=True)
+        print("Data exported to model_data_export.csv!")
+    return solara.Button("Export Data", on_click=on_click)
+
+def export_button_component(model):
+    # This function returns the ExportButton component when called with the model.
+    return ExportButton(model)
 
 model_params = {
     "seed": {
@@ -101,37 +116,34 @@ StatePlot = make_plot_component(
     post_process=post_process_lineplot,
 )
 
-# Bar Chart Component
-import matplotlib.pyplot as plt
-
 def bar_chart_component(model):
     """
     This component retrieves the latest values from the model's DataCollector and creates
     a bar chart showing the current counts for Disruptors, Followers, and Critical Thinkers.
     """
-    # Get the DataCollector DataFrame
     df = model.datacollector.get_model_vars_dataframe()
     if df.empty:
         return solara.Markdown("No data collected yet.")
     
-    # Use the latest row of data (i.e. the last step)
     latest = df.iloc[-1]
-
     labels = ["Disruptors", "Followers", "Critical Thinkers"]
-
     try:
         values = [latest["Infected"], latest["Susceptible"], latest["Resistant"]]
     except KeyError:
-        # Fallback to alternative keys if necessary
-        values = [latest.get("Disruptors", 0), latest.get("Followers", 0), latest.get("Critical Thinkers", 0)]
+        values = [
+            latest.get("Disruptors", 0),
+            latest.get("Followers", 0),
+            latest.get("Critical Thinkers", 0)
+        ]
     
-    # Create the bar chart
     fig, ax = plt.subplots()
     ax.bar(labels, values, color=["tab:red", "tab:green", "tab:gray"])
     ax.set_title("Agent States at Latest Step")
     ax.set_ylabel("Number of Agents")
     
-    return solara.FigureMatplotlib(fig)
+    component = solara.FigureMatplotlib(fig)
+    plt.close(fig)  # Close the figure to prevent memory issues
+    return component
 
 model1 = VirusOnNetwork()
 
@@ -145,9 +157,11 @@ page = SolaraViz(
         SpacePlot,
         StatePlot,
         get_resistant_susceptible_ratio,
-        bar_chart_component  
+        bar_chart_component,
+        export_button_component, 
     ],
     model_params=model_params,
     name="Virus Model",
 )
-page  # noqa
+
+page 
